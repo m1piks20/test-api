@@ -4,7 +4,7 @@ const port = 4200;
 
 const cors = require('cors');
 
-// Здесь мы используем cors как middleware для всех маршрутов
+
 app.use(cors());
 
 let data = {
@@ -16,16 +16,16 @@ let data = {
   "statistics": [
     {
       "period": "year",
-      "total_sales": 1000,
+      "total_sales": 500,
       "total_customers": 100,
       "total_pets": 50,
-      "total_orders": 200
+      "total_orders": 500
     }
   ]
 };
 
 app.use(cors({
-    origin: 'http://localhost:3000' // разрешить только этот домен
+    origin: 'http://localhost:3000' 
 }));
 
 app.get('/', (req, res) => {
